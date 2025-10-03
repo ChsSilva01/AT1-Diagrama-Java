@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package diagrama.de.classe.playlist;
+package playlist;
 
 /**
  *
@@ -23,22 +23,27 @@ public class Playlist {
         this.musicadaplaylist = musicadaplaylist;
     }
     
-    public void MostrarPlaylist(){
+    public void MostrarPlaylist(String[] musica, int[] tempo){
         System.out.println(
                 "Criador: "+nomedocriador+" \n"
                 +"Titulo: "+titulo+ " \n"
                 +"Data de Criacao: "+datadecriacao+ " \n");
-        
-        Musica mus = new Musica();
-        String[] musica = mus.getNome();
-        
-        
+          
         System.out.println("Músicas: ");
-        for(int i = 0; i < 2; i++){
-            if(musicadaplaylist[i] == musica[i]){
-                System.out.println(musica[i]);
+        for(int i = 0; i < musica.length; i++){
+            for(int j = 0; j < this.musicadaplaylist.length; j++){
+                if(musicadaplaylist[j] == musica[i]){
+                    System.out.println(musicadaplaylist[j]);
+                }
             }
         }
+        System.out.println();
+        int duracaoplaylist = 0;
+        System.out.println("Duração: ");
+        for(int k = 0; k < tempo.length; k++){
+            duracaoplaylist += tempo[k];   
+        }
+        System.out.println(duracaoplaylist + " minutos");
     }
     
     

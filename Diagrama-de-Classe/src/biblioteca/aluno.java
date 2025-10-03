@@ -2,20 +2,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package diagrama.de.classe.playlist;
+package biblioteca;
 
 /**
  *
  * @author carlos
  */
-public class Artista {
-    private String[] nomeartista = new String[4];
+public class aluno {
+    private String nome;
     
-    public Artista(String[] artista){
-        this.nomeartista = artista;
+    public void cadastrarAluno(String nome){
+        this.nome = nome;
     }
     
-    public String[] getNome(){
-        return nomeartista;
+    public String getNome(){
+        return nome;
     }
 }

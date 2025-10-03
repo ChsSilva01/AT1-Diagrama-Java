@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package diagrama.de.classe.playlist;
+package playlist;
 
 /**
  *
@@ -18,10 +18,15 @@ public class main {
         Musica mus = new Musica();
         mus.CadasrarMusica(musicateste,duracaoteste);
         
+        String[] musica = mus.getNome();
+        int[] tempo = mus.getDuracao();
+        
         Playlist play = new Playlist();
         String[] artistastesteplay = {"Bayonce","Gustavo Lindo","Luan Pilantra","Tiririca"};
-        String[] musicatesteplay = {"Fire","Tchecerete"};
+        String[] musicatesteplay = {"Fire","Tchecerete","La Bamba"};
         play.CriarPlaylist("Carlos", "Minhas Musicas", "2025-10-02" , artistastesteplay, musicatesteplay);
-        play.MostrarPlaylist();
+        play.MostrarPlaylist(musica,tempo);
+        
+       
     }
 }
